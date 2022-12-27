@@ -17,7 +17,8 @@ module.exports = {
         "bellefair": ["Bellefair", "serif"]
       },
       backgroundImage: {
-        "close": "url(./assets/images/shared/icon-close.svg)"
+        "close": "url('./assets/images/shared/icon-close.svg')",
+        "hamburger": "url('./assets/images/shared/icon-hamburger.svg')"
       }
     },
   },

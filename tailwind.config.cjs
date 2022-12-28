@@ -19,6 +19,9 @@ module.exports = {
       backgroundImage: {
         "close": "url('./assets/images/shared/icon-close.svg')",
         "hamburger": "url('./assets/images/shared/icon-hamburger.svg')"
+      },
+      padding: {
+        "responsive": "clamp(1.5rem, 0.82rem + 2.91vw, 3.4375rem);"
       }
     },
   },

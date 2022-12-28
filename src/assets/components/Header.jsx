@@ -9,7 +9,7 @@ const Header = () => {
 
   const logo = data.home.logo;
   return (
-    <header className='pl-6 py-6 flex'>
+    <header className='pl-6 py-6 flex absolute top-0 left-0'>
       <Logo src={ logo } />
       <NavToggle toggle={() => setVisible(!visible)} isOpened={visible}/>
       <Nav visible={visible} />

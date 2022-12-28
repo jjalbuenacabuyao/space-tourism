@@ -8,7 +8,7 @@ const Nav = props => {
   const links = data.home.links;
   const [home, destination, crew, tech] = links;
   return (
-    <nav className={`${ props.visible ? isVisible : notVisible}`}>
+    <nav className={`${ props.visible ? isVisible : notVisible} fixed inset-0`}>
       <ul>
         <li><a href="#">{ home }</a></li>
         <li><a href="#">{ destination }</a></li>

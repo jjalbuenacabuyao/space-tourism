@@ -1,11 +1,14 @@
 import React from 'react';
 import data from '../constants/data.json';
 
-const Nav = () => {
+const isVisible = "translate-x-0";
+const notVisible = "translate-x-full";
+
+const Nav = props => {
   const links = data.home.links;
   const [home, destination, crew, tech] = links;
   return (
-    <nav>
+    <nav className={`${ props.visible ? isVisible : notVisible}`}>
       <ul>
         <li><a href="#">{ home }</a></li>
         <li><a href="#">{ destination }</a></li>

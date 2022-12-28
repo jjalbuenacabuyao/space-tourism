@@ -1,8 +1,8 @@
 import React from 'react';
 
-const NavToggle = () => {
+const NavToggle = props => {
   return (
-    <button className='h-[21px] w-6 bg-hamburger bg-no-repeat'>
+    <button className={`h-[21px] w-6 ${ props.isOpened ? "bg-close" : "bg-hamburger"} bg-no-repeat`} onClick={ props.toggle }>
       <span className='sr-only'>Toggle Menu</span>
     </button>
   )

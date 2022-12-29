@@ -8,7 +8,7 @@ module.exports = {
     extend: {
       colors: {
         "clr-dark": "hsl(230, 35, 7%)",
-        "off-white": "hsl(231, 77, 90%)",
+        "off-white": "#D0D6F9",
         "semi-transparent": "hsla(0, 0, 100%, 0.04)"
       },
       fontFamily: {
@@ -27,7 +27,8 @@ module.exports = {
         "home-desktop": "url('./assets/images/home/background-home-desktop.jpg')"
       },
       padding: {
-        "responsive": "clamp(1.5rem, 0.82rem + 2.91vw, 3.4375rem);"
+        "responsive": "clamp(1.5rem, 0.82rem + 2.91vw, 3.4375rem)",
+        "home-hero": "clamp(1.5rem, -6.61rem + 34.61vw, 10rem)"
       }
     },
   },

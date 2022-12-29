@@ -1,8 +1,11 @@
-import React from 'react'
+import React from 'react';
+import { Header } from '../components';
 
 const Technology = () => {
   return (
-    <div>Technology</div>
+    <>
+      <Header />
+    </>
   )
 }
 

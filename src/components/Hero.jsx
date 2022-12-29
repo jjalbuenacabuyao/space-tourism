@@ -1,8 +1,11 @@
-import React from 'react'
+import React from 'react';
+import HeroText from './HeroText';
 
 const Hero = () => {
   return (
-    <div>Hero</div>
+    <main>
+      <HeroText />
+    </main>
   )
 }
 

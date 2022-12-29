@@ -1,6 +1,6 @@
 import Button from './Button';
 import Header from './Header';
-import Hero from './Hero';
+import HeroHome from './HeroHome';
 import HeroText from './HeroText';
 import Logo from './Logo';
 import Nav from './Nav';
@@ -9,7 +9,7 @@ import NavToggle from './NavToggle';
 export {
   Button,
   Header,
-  Hero,
+  HeroHome,
   HeroText,
   Logo,
   Nav,

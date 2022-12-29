@@ -1,11 +1,15 @@
 import React from 'react';
-import Home from './containers/Home';
+import { Route, Routes } from 'react-router-dom';
+import { Home, Crew, Technology, Destination } from './containers';
 
 const App = () => {
   return (
-    <>
-      <Home />
-    </>
+    <Routes>
+      <Route path='/' element={ <Home /> } />
+      <Route path='/crew' element={ <Crew /> } />
+      <Route path='/destination' element={ <Destination /> } />
+      <Route path='/technology' element={ <Technology /> } />
+    </Routes>
   )
 }
 

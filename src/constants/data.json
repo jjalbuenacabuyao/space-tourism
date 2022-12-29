@@ -12,6 +12,10 @@
 
   "destinations": [
     {
+      "num": "01",
+      "heading": "Pick your destination"
+    },
+    {
       "name": "Moon",
       "images": {
         "png": "./src/assets/images/destination/image-moon.png",

@@ -18,6 +18,8 @@ module.exports = {
       },
       fontSize: {
         "fs-15": "0.9375rem",
+        "heading": "clamp(1rem, 0.74rem + 1.13vw, 1.75rem)",
+        "highlight": "clamp(5rem, 0.83rem + 17.81vw, 9.375rem);"
       },
       backgroundImage: {
         "close": "url('./assets/images/shared/icon-close.svg')",

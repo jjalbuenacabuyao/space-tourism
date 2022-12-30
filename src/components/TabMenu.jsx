@@ -15,38 +15,38 @@ const TabMenu = () => {
   ));
 
   return (
-    <div className="text-center flex flex-col items-center gap-8">
+    <div className="flex flex-col items-center gap-8 text-center">
       <picture>
         <source srcSet={active.images.webp} />
         <source srcSet={active.images.png} />
         <img
           src={active.images.png}
           alt={active.imgAlt}
-          className="w-[10.625rem] aspect-square"
+          className="aspect-square w-[10.625rem]"
         />
       </picture>
-      <ul className="flex gap-6 items-center text-sm">{listItems}</ul>
+      <ul className="flex items-center gap-6 text-sm">{listItems}</ul>
       <article>
-        <div className="flex flex-col gap-6 pb-8 border-b-[1px] border-b-off-white">
-          <h1 className="text-planet-name uppercase font-bellefair">
+        <div className="flex flex-col gap-6 border-b-[1px] border-b-off-white pb-8">
+          <h1 className="font-bellefair text-planet-name uppercase">
             {active.name}
           </h1>
           <p>{active.description}</p>
         </div>
         <div className="flex flex-col gap-8 pt-8">
           <div className="flex flex-col gap-3">
-            <p className="uppercase text-sm font-barlow-condensed">
+            <p className="font-barlow-condensed text-sm uppercase">
               {active.distanceTitle}
             </p>
-            <p className="uppercase font-bellefair text-[1.75rem]">
+            <p className="font-bellefair text-[1.75rem] uppercase">
               {active.distance}
             </p>
           </div>
           <div className="flex flex-col gap-3">
-            <p className="uppercase text-sm font-barlow-condensed">
+            <p className="font-barlow-condensed text-sm uppercase">
               {active.travelTitle}
             </p>
-            <p className="uppercase font-bellefair text-[1.75rem]">
+            <p className="font-bellefair text-[1.75rem] uppercase">
               {active.travel}
             </p>
           </div>

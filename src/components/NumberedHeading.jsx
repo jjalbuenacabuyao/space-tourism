@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
 
-const NumberedHeading = props => {
+const NumberedHeading = (props) => {
   return (
-    <h1 className='text-center uppercase text-base tracking-[2.7px] font-barlow-condensed'><span className='font-bold mr-4' aria-hidden="true">{ props.num }</span>{ props.text }</h1>
-  )
-}
+    <h1 className="text-center font-barlow-condensed text-base uppercase tracking-[2.7px]">
+      <span className="mr-4 font-bold" aria-hidden="true">
+        {props.num}
+      </span>
+      {props.text}
+    </h1>
+  );
+};
 
-export default NumberedHeading
+export default NumberedHeading;

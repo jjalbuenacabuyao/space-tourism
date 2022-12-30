@@ -9,7 +9,7 @@ const HeroDestination = () => {
   const num = data.destinations[0].num;
   return (
     <HeroContainer px="px-hero" pb="pb-[3.75rem]" bg="bg-dest-mobile">
-      <NumberedHeading num={num} text={text} />
+      <NumberedHeading num={num} text={heading} />
       <TabMenu />
     </HeroContainer>
   );

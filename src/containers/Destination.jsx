@@ -1,6 +1,5 @@
-import React from 'react';
-import { Header } from '../components';
-import HeroDestination from '../components';
+import React from "react";
+import { Header, HeroDestination } from "../components";
 
 const Destination = () => {
   return (
@@ -8,7 +7,7 @@ const Destination = () => {
       <Header />
       <HeroDestination />
     </>
-  )
-}
+  );
+};
 
-export default Destination
+export default Destination;

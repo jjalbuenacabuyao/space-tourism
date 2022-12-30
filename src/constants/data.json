@@ -16,6 +16,7 @@
       "heading": "Pick your destination"
     },
     {
+      "id": 0,
       "name": "Moon",
       "images": {
         "png": "./src/assets/images/destination/image-moon.png",
@@ -29,6 +30,7 @@
       "travel": "3 days"
     },
     {
+      "id": 1,
       "name": "Mars",
       "images": {
         "png": "./src/assets/images/destination/image-mars.png",
@@ -42,6 +44,7 @@
       "travel": "9 months"
     },
     {
+      "id": 2,
       "name": "Europa",
       "images": {
         "png": "./src/assets/images/destination/image-europa.png",
@@ -55,6 +58,7 @@
       "travel": "3 years"
     },
     {
+      "id": 3,
       "name": "Titan",
       "images": {
         "png": "./src/assets/images/destination/image-titan.png",

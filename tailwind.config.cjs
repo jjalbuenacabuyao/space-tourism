@@ -26,7 +26,10 @@ module.exports = {
         "hamburger": "url('./assets/images/shared/icon-hamburger.svg')",
         "home-mobile": "url('./assets/images/home/background-home-mobile.jpg')",
         "home-tablet": "url('./assets/images/home/background-home-tablet.jpg')",
-        "home-desktop": "url('./assets/images/home/background-home-desktop.jpg')"
+        "home-desktop": "url('./assets/images/home/background-home-desktop.jpg')",
+        "dest-desktop": "url('./assets/images/destination/background-destination-desktop.jpg')",
+        "dest-mobile": "url('./assets/images/destination/background-destination-mobile.jpg')",
+        "dest-tablet": "url('./assets/images/destination/background-destination-tablet.jpg')"
       },
       padding: {
         "responsive": "clamp(1.5rem, 0.82rem + 2.91vw, 3.4375rem)",

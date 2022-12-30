@@ -8,7 +8,11 @@ const TabMenu = () => {
   const [, moon, mars, europa, titan] = destinations;
   const [active, setActive] = useState(moon);
   const planets = [moon, mars, europa, titan];
-  let listItems = planets.map(planet => <Tablist planet={planet} active={active} setter={setActive} />);
+  let listItems = planets.map((planet) => (
+    <li key={planet.id}>
+      <Tablist planet={planet} active={active} setter={setActive} />
+    </li>
+  ));
 
   return (
     <div className="text-center flex flex-col items-center gap-8">
@@ -21,9 +25,7 @@ const TabMenu = () => {
           className="w-[10.625rem] aspect-square"
         />
       </picture>
-      <ul className="flex gap-6 items-center text-sm">
-        {listItems}
-      </ul>
+      <ul className="flex gap-6 items-center text-sm">{listItems}</ul>
       <article>
         <div className="flex flex-col gap-6 pb-8 border-b-[1px] border-b-off-white">
           <h1 className="text-planet-name uppercase font-bellefair">

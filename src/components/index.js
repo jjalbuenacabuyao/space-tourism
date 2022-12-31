@@ -10,6 +10,7 @@ import NumberedHeading from './NumberedHeading';
 import HeroContainer from './HeroContainer';
 import TabMenu from './TabMenu';
 import Tablist from './Tablist';
+import Image from './Image';
 
 export {
   Button,
@@ -23,5 +24,6 @@ export {
   NumberedHeading,
   HeroContainer,
   TabMenu,
-  Tablist
+  Tablist,
+  Image
 }

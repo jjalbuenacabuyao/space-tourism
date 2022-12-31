@@ -5,7 +5,7 @@ const NavToggle = (props) => {
     <button
       className={`h-[21px] w-6 ${
         props.isOpened ? "bg-close" : "bg-hamburger"
-      } z-50 bg-no-repeat`}
+      } z-50 bg-no-repeat md:hidden`}
       onClick={props.toggle}
     >
       <span className="sr-only">Toggle Menu</span>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import data from "../constants/data.json";
 import Tablist from "./Tablist";
 import Image from "./Image";
+import TextContainer from "./TextContainer";
 
 const TabMenu = () => {
   const destinations = data.destinations;
@@ -23,14 +24,17 @@ const TabMenu = () => {
         alt={active.imgAlt}
         className="aspect-square w-[10.625rem]"
       />
+      
       <ul className="flex items-center gap-6 text-sm">{listItems}</ul>
+
       <article>
-        <div className="flex flex-col gap-6 border-b-[1px] border-b-off-white pb-8">
+        <TextContainer paddingBottom="pb-8" bordered="true">
           <h1 className="font-bellefair text-planet-name uppercase">
             {active.name}
           </h1>
           <p>{active.description}</p>
-        </div>
+        </TextContainer>
+
         <div className="flex flex-col gap-8 pt-8">
           <div className="flex flex-col gap-3">
             <p className="font-barlow-condensed text-sm uppercase">

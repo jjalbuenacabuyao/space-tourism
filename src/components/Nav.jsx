@@ -1,6 +1,6 @@
 import React from "react";
 import data from "../constants/data.json";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const isVisible = "translate-x-0";
 const notVisible = "translate-x-[200%]";
@@ -8,8 +8,23 @@ const notVisible = "translate-x-[200%]";
 const Nav = (props) => {
   const links = data.home.links;
   const [home, destination, crew, tech] = links;
-  const liStyle = "text-base font-barlow-condensed pl-8 tracking-[2.7px] uppercase md:py-10 md:pl-0";
-  const numStyle = "font-bold mr-3";
+  const pages = [home, destination, crew, tech];
+  const liStyle =
+    "text-base font-barlow-condensed pl-8 tracking-[2.7px] uppercase md:py-10 md:pl-0";
+  const location = useLocation();
+  const numStyle = "font-bold mr-3 md:hidden lg:inline";
+  const linkActive = "border-r-4 border-white md:border-r-0 md:border-b-4";
+  const listItems = pages.map((link, index) => (
+    <li
+      key={link}
+      className={`${liStyle} ${
+        location.pathname === `/${link}` ? linkActive : ""
+      }`}
+    >
+      <span className={numStyle}>{`0${index}`}</span>
+      <Link to={`/${link}`}>{link}</Link>
+    </li>
+  ));
 
   return (
     <nav
@@ -18,22 +33,7 @@ const Nav = (props) => {
       } md:static md:w-auto md:transform-none`}
     >
       <ul className="flex flex-col gap-9 pt-32 md:flex-row md:py-0 md:px-12">
-        <li className={liStyle}>
-          <span className={numStyle}>00</span>
-          <Link to="/">{home}</Link>
-        </li>
-        <li className={liStyle}>
-          <span className={numStyle}>01</span>
-          <Link to="/destination">{destination}</Link>
-        </li>
-        <li className={liStyle}>
-          <span className={numStyle}>02</span>
-          <Link to="/crew">{crew}</Link>
-        </li>
-        <li className={liStyle}>
-          <span className={numStyle}>03</span>
-          <Link to="/technology">{tech}</Link>
-        </li>
+        {listItems}
       </ul>
     </nav>
   );

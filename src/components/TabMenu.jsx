@@ -23,7 +23,7 @@ const TabMenu = () => {
         webpSrc={active.images.webp}
         pngSrc={active.images.png}
         alt={active.imgAlt}
-        className="aspect-square w-[10.625rem]"
+        className="aspect-square w-img-responsive"
       />
 
       <ul className="flex items-center gap-6 text-sm">{listItems}</ul>

@@ -3,6 +3,7 @@ import data from "../constants/data.json";
 import Tablist from "./Tablist";
 import Image from "./Image";
 import TextContainer from "./TextContainer";
+import DistanceTravel from "./DistanceTravel";
 
 const TabMenu = () => {
   const destinations = data.destinations;
@@ -24,7 +25,7 @@ const TabMenu = () => {
         alt={active.imgAlt}
         className="aspect-square w-[10.625rem]"
       />
-      
+
       <ul className="flex items-center gap-6 text-sm">{listItems}</ul>
 
       <article>
@@ -36,22 +37,11 @@ const TabMenu = () => {
         </TextContainer>
 
         <div className="flex flex-col gap-8 pt-8">
-          <div className="flex flex-col gap-3">
-            <p className="font-barlow-condensed text-sm uppercase">
-              {active.distanceTitle}
-            </p>
-            <p className="font-bellefair text-[1.75rem] uppercase">
-              {active.distance}
-            </p>
-          </div>
-          <div className="flex flex-col gap-3">
-            <p className="font-barlow-condensed text-sm uppercase">
-              {active.travelTitle}
-            </p>
-            <p className="font-bellefair text-[1.75rem] uppercase">
-              {active.travel}
-            </p>
-          </div>
+          <DistanceTravel
+            title={active.distanceTitle}
+            value={active.distance}
+          />
+          <DistanceTravel title={active.travelTitle} value={active.travel} />
         </div>
       </article>
     </div>

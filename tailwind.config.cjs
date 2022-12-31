@@ -5,6 +5,11 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      'sm': '375px',
+      'md': '768px',
+      'lg': '1440px',
+    },
     extend: {
       colors: {
         "clr-dark": "#0B0D17",
@@ -36,6 +41,9 @@ module.exports = {
         "hero": "clamp(1.5rem, -6.61rem + 34.61vw, 10rem)",
         "30px": "1.875rem",
         "68px": "4.25rem"
+      },
+      width: {
+        "img-responsive" : "clamp(10.625rem, 4.57rem + 25.82vw, 27.8125rem)",
       },
     },
   },

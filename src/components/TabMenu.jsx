@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import data from "../constants/data.json";
 import Tablist from "./Tablist";
+import Image from "./Image";
 
 const TabMenu = () => {
   const destinations = data.destinations;
@@ -16,15 +17,12 @@ const TabMenu = () => {
 
   return (
     <div className="flex flex-col items-center gap-8 text-center">
-      <picture>
-        <source srcSet={active.images.webp} />
-        <source srcSet={active.images.png} />
-        <img
-          src={active.images.png}
-          alt={active.imgAlt}
-          className="aspect-square w-[10.625rem]"
-        />
-      </picture>
+      <Image
+        webpSrc={active.images.webp}
+        pngSrc={active.images.png}
+        alt={active.imgAlt}
+        className="aspect-square w-[10.625rem]"
+      />
       <ul className="flex items-center gap-6 text-sm">{listItems}</ul>
       <article>
         <div className="flex flex-col gap-6 border-b-[1px] border-b-off-white pb-8">

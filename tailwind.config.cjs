@@ -9,7 +9,6 @@ module.exports = {
       colors: {
         "clr-dark": "#0B0D17",
         "off-white": "#D0D6F9",
-        "semi-transparent": "hsla(0, 0, 100%, 0.04)"
       },
       fontFamily: {
         "barlow": ["Barlow", "sans-serif"],

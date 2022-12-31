@@ -11,6 +11,8 @@ import HeroContainer from './HeroContainer';
 import TabMenu from './TabMenu';
 import Tablist from './Tablist';
 import Image from './Image';
+import TextContainer from './TextContainer';
+import DistanceTravel from './DistanceTravel';
 
 export {
   Button,
@@ -25,5 +27,7 @@ export {
   HeroContainer,
   TabMenu,
   Tablist,
-  Image
+  Image,
+  TextContainer,
+  DistanceTravel
 }

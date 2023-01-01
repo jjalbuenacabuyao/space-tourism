@@ -2,10 +2,9 @@ import React from "react";
 import data from "../constants/data.json";
 import { Link, useLocation } from "react-router-dom";
 
-const isVisible = "translate-x-0";
-const notVisible = "translate-x-[200%]";
-
 const Nav = (props) => {
+  const isVisible = "translate-x-0";
+  const notVisible = "translate-x-[200%]";
   const links = data.home.links;
   const [home, destination, crew, tech] = links;
   const pages = [home, destination, crew, tech];

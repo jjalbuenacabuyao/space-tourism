@@ -45,6 +45,7 @@ module.exports = {
         "btn-px-md": "clamp(2.875rem, 2.52rem + 1.5vw, 3.875rem)",
         "btn-py-md": "clamp(6.4375rem, 6.08rem + 1.5vw, 7.4375rem)",
         "hero-home-pb": "clamp(3rem, 1.2rem + 7.7vw, 8.125rem)",
+        "hero-home-pt": "clamp(7rem, 3.5625rem + 17.1875vw, 24.1875rem)",
       },
       width: {
         "img-responsive" : "clamp(10.625rem, 4.57rem + 25.82vw, 27.8125rem)",

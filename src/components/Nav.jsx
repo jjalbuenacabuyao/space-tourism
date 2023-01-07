@@ -31,7 +31,7 @@ const Nav = (props) => {
         props.visible ? isVisible : notVisible
       } md:static md:w-auto md:transform-none`}
     >
-      <ul className="flex flex-col gap-9 pt-32 md:flex-row md:py-0 md:px-12">
+      <ul className="flex flex-col gap-9 pt-32 md:flex-row md:py-0 md:px-responsive">
         {listItems}
       </ul>
     </nav>

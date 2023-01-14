@@ -13,6 +13,7 @@ import Tablist from './Tablist';
 import Image from './Image';
 import TextContainer from './TextContainer';
 import DistanceTravel from './DistanceTravel';
+import HeroCrew from './HeroCrew';
 
 export {
   Button,
@@ -29,5 +30,6 @@ export {
   Tablist,
   Image,
   TextContainer,
-  DistanceTravel
+  DistanceTravel,
+  HeroCrew
 }

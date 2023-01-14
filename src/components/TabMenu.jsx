@@ -18,7 +18,7 @@ const TabMenu = () => {
   ));
 
   return (
-    <div className="flex flex-col items-center gap-8 text-center lg:grid lg:grid-cols-2">
+    <div className="flex flex-col items-center gap-8 text-center lg:grid lg:grid-cols-2 lg:items-center">
       <Image
         webpSrc={active.images.webp}
         pngSrc={active.images.png}
@@ -26,8 +26,8 @@ const TabMenu = () => {
         className="aspect-square w-img-responsive"
       />
 
-      <article className="lg:flex lg:flex-col lg:gap-8">
-        <ul className="flex items-center gap-6 text-sm">{listItems}</ul>
+      <article className="lg:flex lg:flex-col lg:gap-8 lg:text-left">
+        <ul className="flex items-center gap-6 text-sm justify-center lg:justify-start lg:text-base lg:gap-8">{listItems}</ul>
         <TextContainer paddingBottom="pb-8" bordered="true">
           <h1 className="font-bellefair text-planet-name uppercase leading-[1.3em]">
             {active.name}
@@ -35,14 +35,7 @@ const TabMenu = () => {
           <p>{active.description}</p>
         </TextContainer>
 
-        {/* <div>
-        <h1 className="font-bellefair text-planet-name uppercase">
-            {active.name}
-          </h1>
-          <p>{active.description}</p>
-        </div> */}
-
-        <div className="flex flex-col gap-8 pt-8">
+        <div className="flex flex-col gap-8 pt-8 lg:flex-row lg:gap-20">
           <DistanceTravel
             title={active.distanceTitle}
             value={active.distance}

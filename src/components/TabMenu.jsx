@@ -18,7 +18,7 @@ const TabMenu = () => {
   ));
 
   return (
-    <div className="flex flex-col items-center gap-8 text-center lg:grid lg:grid-cols-2 lg:items-center">
+    <div className="flex flex-col items-center gap-8 text-center px-hero lg:grid lg:grid-cols-2 lg:items-center">
       <Image
         webpSrc={active.images.webp}
         pngSrc={active.images.png}

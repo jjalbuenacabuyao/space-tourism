@@ -27,7 +27,7 @@ const Nav = (props) => {
 
   return (
     <nav
-      className={`fixed top-0 bottom-0 right-0 w-[67.73%] bg-white/[.04] backdrop-blur-[81.55px] ${
+      className={`fixed z-10 top-0 bottom-0 right-0 w-[67.73%] bg-white/[.04] backdrop-blur-[81.55px] ${
         props.visible ? isVisible : notVisible
       } md:static md:w-auto md:transform-none`}
     >

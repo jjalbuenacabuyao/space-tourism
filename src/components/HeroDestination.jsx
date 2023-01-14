@@ -9,7 +9,6 @@ const HeroDestination = () => {
   const num = data.destinations[0].num;
   return (
     <HeroContainer
-      px="px-hero"
       pb="pb-[3.75rem] lg:pb-32"
       bg="bg-dest-mobile md:bg-dest-tablet lg:bg-dest-desktop"
     >

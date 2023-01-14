@@ -4,7 +4,6 @@ import NumberedHeading from "./NumberedHeading";
 import data from "../constants/data.json";
 import TextContainer from "./TextContainer";
 import Image from "./Image";
-import Tablist from "./Tablist";
 
 const HeroCrew = () => {
   const crew = data.crew;

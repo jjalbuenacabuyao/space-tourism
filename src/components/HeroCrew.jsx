@@ -14,36 +14,41 @@ const HeroCrew = () => {
   const persons = [douglas, mark, victor, anousheh];
   let listItems = persons.map((person) => (
     <li key={person.id}>
-      <button 
-      onClick={() => setActive(person)} 
-      className={`w-[10px] aspect-square rounded-full bg-white ${person === active ? "" : "opacity-[0.17]"}`}></button>
+      <button
+        onClick={() => setActive(person)}
+        className={`aspect-square w-[10px] rounded-full bg-white lg:w-[15px] ${
+          person === active ? "" : "opacity-[0.17]"
+        }`}
+      ></button>
     </li>
   ));
 
   return (
-    <HeroContainer
-      px="px-hero"
-      pb="pb-[3.75rem] lg:pb-32"
-      bg="bg-crew-mobile md:bg-crew-tablet lg:bg-crew-desktop"
-    >
-      <NumberedHeading num={num} text={heading} />
-      <div className="px-hero flex flex-col items-center">
+    <HeroContainer className="bg-crew-mobile px-hero pb-[6.5rem] md:bg-crew-tablet md:pb-0 lg:bg-crew-desktop">
+      <NumberedHeading num={num} text={heading}/>
+      <article className="flex flex-col items-center gap-8 text-center xl:grid xl:grid-cols-2 xl:text-left">
         <Image
+          border="true"
+          order="order-1 md:order-3"
           webpSrc={active.images.webp}
           pngSrc={active.images.png}
           alt={active.imgAlt}
-          className="h-[222px]"
+          className="m-auto h-person-img"
         />
-        <ul className="flex justify-center gap-5 z-1">{listItems}</ul>
-        <TextContainer paddingBottom="pb-0" bordered="false">
-          <h1>
-            <span>{active.role}</span>
-            <br />
-            {active.name}
+
+        <TextContainer className="order-2 pb-0 md:order-1" bordered="false">
+          <ul className="z-1 order-3 flex justify-center gap-5 xl:mt-24 xl:justify-start">
+            {listItems}
+          </ul>
+          <h1 className="order-1 flex flex-col gap-2 font-bellefair text-2xl uppercase md:gap-3 md:text-[2.5rem]">
+            <span className="text-base opacity-50 md:text-2xl">
+              {active.role}
+            </span>
+            <span>{active.name}</span>
           </h1>
-          <p>{active.bio}</p>
+          <p className="order-2 max-w-md">{active.bio}</p>
         </TextContainer>
-      </div>
+      </article>
     </HeroContainer>
   );
 };

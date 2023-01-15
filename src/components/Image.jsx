@@ -2,7 +2,7 @@ import React from 'react'
 
 const Image = props => {
   return (
-    <picture className={`w-full ${props.border === "true" ? "border-b-[1px] border-b-off-white" : ""}`}>
+    <picture className={`w-full ${props.border === "true" ? "border-b-[1px] border-b-off-white" : ""} ${props.order}`}>
       <source srcSet={props.webpSrc} />
         <source srcSet={props.pngSrc} />
         <img

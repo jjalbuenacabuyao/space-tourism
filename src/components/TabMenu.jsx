@@ -30,11 +30,11 @@ const TabMenu = () => {
 
       <article className="flex flex-col gap-5 lg:gap-8 lg:text-left order-2">
         <ul className="flex items-center gap-6 text-sm justify-center lg:justify-start lg:text-base lg:gap-8 order-1">{listItems}</ul>
-        <TextContainer order="order-2" paddingBottom="pb-8" bordered="true">
+        <TextContainer className="pb-8 order-2" bordered="true">
           <h1 className="font-bellefair text-planet-name uppercase leading-[1.2em]">
             {active.name}
           </h1>
-          <p>{active.description}</p>
+          <p className="max-w-md">{active.description}</p>
         </TextContainer>
 
         <div className="flex flex-col gap-8 pt-8 lg:flex-row lg:gap-20 order-3">

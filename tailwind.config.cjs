@@ -15,6 +15,7 @@ module.exports = {
       colors: {
         "clr-dark": "#0B0D17",
         "off-white": "#D0D6F9",
+        "border": "#383B4B",
       },
       fontFamily: {
         "barlow": ["Barlow", "sans-serif"],
@@ -52,6 +53,9 @@ module.exports = {
       width: {
         "img-responsive" : "clamp(10.625rem, 4.57rem + 25.82vw, 27.8125rem)",
       },
+      height: {
+        "person-img": "clamp(13.9375rem, 3.18rem + 45.92vw, 44.5rem)",
+      }
     },
   },
   plugins: [],

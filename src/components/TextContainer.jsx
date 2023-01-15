@@ -5,7 +5,7 @@ const TextContainer = (props) => {
     <div
       className={`flex flex-col gap-6 ${props.paddingBottom} ${
         props.bordered === "true" ? "border-b-[1px] border-b-off-white" : ""
-      }`}
+      } ${props.order}`}
     >
       {props.children}
     </div>

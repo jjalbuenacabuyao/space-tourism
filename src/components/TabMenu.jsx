@@ -20,16 +20,17 @@ const TabMenu = () => {
   return (
     <div className="flex flex-col items-center gap-8 text-center px-hero lg:grid lg:grid-cols-2 lg:items-center">
       <Image
+        border="false"
         webpSrc={active.images.webp}
         pngSrc={active.images.png}
         alt={active.imgAlt}
-        className="aspect-square w-img-responsive"
+        className="aspect-square w-img-responsive m-auto"
       />
 
-      <article className="lg:flex lg:flex-col lg:gap-8 lg:text-left">
+      <article className="flex flex-col gap-5 lg:gap-8 lg:text-left">
         <ul className="flex items-center gap-6 text-sm justify-center lg:justify-start lg:text-base lg:gap-8">{listItems}</ul>
         <TextContainer paddingBottom="pb-8" bordered="true">
-          <h1 className="font-bellefair text-planet-name uppercase leading-[1.3em]">
+          <h1 className="font-bellefair text-planet-name uppercase leading-[1.2em]">
             {active.name}
           </h1>
           <p>{active.description}</p>

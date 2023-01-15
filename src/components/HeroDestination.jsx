@@ -9,10 +9,9 @@ const HeroDestination = () => {
   const num = data.destinations[0].num;
   return (
     <HeroContainer
-      pb="pb-[3.75rem] lg:pb-32"
-      bg="bg-dest-mobile md:bg-dest-tablet lg:bg-dest-desktop"
+      className="pb-[3.75rem] lg:pb-32 bg-dest-mobile md:bg-dest-tablet lg:bg-dest-desktop"
     >
-      <NumberedHeading num={num} text={heading} />
+      <NumberedHeading num={num} text={heading} className="md:pl-10 lg:px-hero" />
       <TabMenu />
     </HeroContainer>
   );

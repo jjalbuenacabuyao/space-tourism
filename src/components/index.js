@@ -14,6 +14,7 @@ import Image from './Image';
 import TextContainer from './TextContainer';
 import DistanceTravel from './DistanceTravel';
 import HeroCrew from './HeroCrew';
+import HeroTechnology from './HeroTechnology';
 
 export {
   Button,
@@ -31,5 +32,6 @@ export {
   Image,
   TextContainer,
   DistanceTravel,
-  HeroCrew
+  HeroCrew,
+  HeroTechnology
 }

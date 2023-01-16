@@ -16,28 +16,31 @@ const TabMenu = () => {
       <Tablist planet={planet} active={active} setter={setActive} />
     </li>
   ));
+  const imageProps = {
+    border: false,
+    order: "order-1",
+    webpSrc: active.images.webp,
+    pngSrc: active.images.png,
+    alt: active.imgAlt,
+    className: "aspect-square w-img-responsive m-auto",
+  };
 
   return (
-    <div className="flex flex-col items-center gap-8 text-center px-hero lg:grid lg:grid-cols-2 lg:items-center">
-      <Image
-        border="false"
-        order="order-1"
-        webpSrc={active.images.webp}
-        pngSrc={active.images.png}
-        alt={active.imgAlt}
-        className="aspect-square w-img-responsive m-auto"
-      />
+    <div className="flex flex-col items-center gap-8 px-hero text-center lg:grid lg:grid-cols-2 lg:items-center">
+      <Image {...imageProps} />
 
-      <article className="flex flex-col gap-5 lg:gap-8 lg:text-left order-2">
-        <ul className="flex items-center gap-6 text-sm justify-center lg:justify-start lg:text-base lg:gap-8 order-1">{listItems}</ul>
-        <TextContainer className="pb-8 order-2" bordered="true">
+      <article className="order-2 flex flex-col gap-5 lg:gap-8 lg:text-left">
+        <ul className="order-1 flex items-center justify-center gap-6 text-sm lg:justify-start lg:gap-8 lg:text-base">
+          {listItems}
+        </ul>
+        <TextContainer className="order-2 pb-8" bordered="true">
           <h1 className="font-bellefair text-planet-name uppercase leading-[1.2em]">
             {active.name}
           </h1>
           <p className="max-w-md">{active.description}</p>
         </TextContainer>
 
-        <div className="flex flex-col gap-8 pt-8 lg:flex-row lg:gap-20 order-3">
+        <div className="order-3 flex flex-col gap-8 pt-8 lg:flex-row lg:gap-20">
           <DistanceTravel
             title={active.distanceTitle}
             value={active.distance}

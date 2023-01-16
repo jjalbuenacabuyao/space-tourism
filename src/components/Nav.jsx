@@ -29,7 +29,7 @@ const Nav = (props) => {
     <nav
       className={`fixed z-10 top-0 bottom-0 right-0 w-[67.73%] bg-white/[.04] backdrop-blur-[81.55px] ${
         props.visible ? isVisible : notVisible
-      } md:static md:w-auto md:transform-none before:hidden before:xl:block before:w-[80%] before:h-[1px] before:bg-off-white before:absolute before:top-[50%] before:right-[95%]`}
+      } md:static md:w-auto md:transform-none before:hidden before:xl:block before:w-[40vw] before:h-[1px] before:bg-off-white before:absolute before:top-[50%] before:right-[95%]`}
     >
       <ul className="flex flex-col gap-9 pt-32 md:flex-row md:py-0 md:px-responsive xl:px-[7.6875rem]">
         {listItems}

@@ -1,10 +1,11 @@
 import React from 'react';
-import { Header } from '../components';
+import { Header, HeroTechnology } from '../components';
 
 const Technology = () => {
   return (
     <>
       <Header />
+      <HeroTechnology />
     </>
   )
 }

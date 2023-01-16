@@ -39,7 +39,10 @@ module.exports = {
         "dest-tablet": "url('./assets/images/destination/background-destination-tablet.jpg')",
         "crew-mobile": "url('./assets/images/crew/background-crew-mobile.jpg')",
         "crew-tablet": "url('./assets/images/crew/background-crew-tablet.jpg')",
-        "crew-desktop": "url('./assets/images/crew/background-crew-desktop.jpg')"
+        "crew-desktop": "url('./assets/images/crew/background-crew-desktop.jpg')",
+        "tech-mobile": "url('./assets/images/technology/background-technology-mobile.jpg')",
+        "tech-tablet": "url('./assets/images/technology/background-technology-tablet.jpg')",
+        "tech-desktop": "url('./assets/images/technology/background-technology-desktop.jpg')",
       },
       padding: {
         "responsive": "clamp(1.5rem, 0.82rem + 2.91vw, 3.4375rem)",

@@ -5,7 +5,7 @@ import { HashRouter } from 'react-router-dom'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <HashRouter basename='/space-tourism'>
+  <HashRouter basename='/space-tourism/dist/'>
       <App />
   </HashRouter>,
 )

@@ -42,7 +42,7 @@ const HeroCrew = () => {
         <Image {...imageProps} />
 
         <TextContainer className="order-2 pb-0 md:order-1" bordered="false">
-          <ul className="z-1 order-3 flex justify-center gap-5 lg:justify-start xl:mt-24">
+          <ul className="z-1 order-1 md:order-3 flex justify-center gap-5 lg:justify-start xl:mt-24">
             {listItems}
           </ul>
           <h1 className="order-1 flex flex-col gap-2 font-bellefair text-2xl uppercase md:gap-3 md:text-[2.5rem]">

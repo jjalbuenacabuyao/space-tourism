@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Logo = (props) => {
+const Logo = () => {
   return (
-    <div className="h-10 w-10">
-      <img src={props.src} alt="Space Tourism Logo" />
-    </div>
+    <Link to={"/"} className="h-10 w-10">
+      <img src="/images/shared/logo.svg" alt="Space Tourism Logo" />
+    </Link>
   );
 };
 

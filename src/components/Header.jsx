@@ -8,21 +8,21 @@ const Header = () => {
   const pathname = path.pathname;
 
   return (
-    <header className="relative flex items-center justify-between p-6 md:py-0 md:pl-10 md:pr-0 lg:pl-16 lg:pt-10">
+    <header className="relative mx-auto flex max-w-screen-xl items-center justify-between p-6 md:py-0 md:pl-10 md:pr-0 lg:pl-16 lg:pt-10">
       <Link
         to={"/"}
-        className="lg:relative lg:after:absolute lg:after:left-16 lg:after:top-1/2 lg:after:bottom-1/2 lg:after:z-[999999] lg:after:block lg:after:h-[1px] lg:after:w-56 lg:after:bg-white"
+        className="lg:relative lg:after:absolute lg:after:left-16 lg:after:top-1/2 lg:after:bottom-1/2 lg:after:z-[999999] lg:after:block lg:after:h-[1px] lg:after:w-56 lg:after:bg-white/25 xl:after:left-28 xl:after:w-[473px]"
       >
         <img
           src="/images/shared/logo.svg"
           alt="Space Tourism Logo"
-          className="h-10 w-10"
+          className="h-10 w-10 xl:h-12 xl:w-12"
         />
       </Link>
 
       <nav
         data-expanded={navExpanded}
-        className="fixed top-0 bottom-0 right-0 left-[45%] translate-x-full bg-white/5 pl-8 pt-32 backdrop-blur-[85px] transition-all data-[expanded=true]:translate-x-0 md:static md:translate-x-0 md:pt-6 md:pr-10 lg:pr-16 lg:pl-32"
+        className="fixed top-0 bottom-0 right-0 left-[45%] translate-x-full bg-white/5 pl-8 pt-32 backdrop-blur-[85px] transition-all data-[expanded=true]:translate-x-0 md:static md:translate-x-0 md:pt-6 md:pr-10 lg:pr-16 lg:pl-32 xl:pr-40"
       >
         <ul className="flex flex-col gap-8 md:flex-row">
           {links.map((link, index) => (

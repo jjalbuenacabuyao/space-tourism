@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-home-mobile bg-cover bg-no-repeat md:bg-home-tablet lg:bg-home-desktop">
       <Header />
-      <main className="flex flex-col items-center gap-20 p-6 md:px-40 md:pt-28 md:gap-40 md:pb-24 lg:grid lg:grid-cols-2 lg:px-28">
+      <main className="mx-auto flex max-w-screen-xl flex-col items-center gap-20 p-6 md:gap-40 md:px-40 md:pt-28 md:pb-24 lg:grid lg:grid-cols-2 lg:px-28 xl:px-40 xl:pb-32 xl:pt-64">
         <div className="flex flex-col gap-10 text-center lg:text-left">
           <h1 className="uppercase">
             <span className="font-barlow-condensed tracking-[2.7px] md:text-xl md:tracking-[3.38px]">
@@ -22,7 +22,7 @@ const Home = () => {
           </p>
         </div>
 
-        <button className="rounded-full bg-white py-16 px-[30px] font-bellefair text-xl uppercase leading-none tracking-[1.25px] text-clr-dark md:px-16 md:py-28 md:text-3xl md:tracking-[2px] self-end justify-self-end">
+        <button className="lg:self-end lg:justify-self-end rounded-full bg-white py-16 px-[30px] font-bellefair text-xl uppercase leading-none tracking-[1.25px] text-clr-dark md:px-16 md:py-28 md:text-3xl md:tracking-[2px]">
           Explore
         </button>
       </main>

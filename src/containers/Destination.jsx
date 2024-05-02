@@ -68,7 +68,7 @@ const Destination = () => {
               <Trigger
                 key={trigger}
                 value={trigger}
-                className="box-border border-b-[3px] border-b-transparent pb-2 font-barlow-condensed text-sm uppercase tracking-[2.36px] aria-selected:border-b-white md:text-base"
+                className="box-border border-b-[3px] border-b-transparent pb-2 font-barlow-condensed text-sm uppercase tracking-[2.36px] text-off-white aria-selected:border-b-white aria-selected:text-white md:text-base"
               >
                 {trigger}
               </Trigger>

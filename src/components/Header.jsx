@@ -30,7 +30,7 @@ const Header = () => {
               <Link
                 to={link === "Home" ? "/" : `/${link.toLowerCase()}`}
                 className={`grid grid-cols-[1.25rem_auto] gap-2 font-barlow-condensed uppercase tracking-[2.7px] md:block lg:grid ${
-                  pathname === link.toLowerCase() ||
+                  pathname === `/${link.toLowerCase()}` ||
                   (pathname === "/" && link === "Home")
                     ? "border-r-2 border-white md:border-r-0 md:border-b-2 md:pb-6"
                     : ""

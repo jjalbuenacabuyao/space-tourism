@@ -40,13 +40,13 @@ const Destination = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-dest-mobile bg-cover bg-no-repeat">
+    <div className="min-h-screen bg-dest-mobile bg-cover bg-no-repeat md:bg-dest-tablet">
       <Header />
       <main>
         <NumberedHeading index={1} title="Pick your destination" />
         <Root
           defaultValue="Moon"
-          className="flex flex-col items-center gap-8 px-6 pb-14"
+          className="flex flex-col items-center gap-8 px-6 pb-14 md:gap-14 md:px-24 md:pb-16"
         >
           {contents.map(({ title, img, ...rest }) => (
             <Content
@@ -58,7 +58,7 @@ const Destination = () => {
               <img
                 src={img}
                 alt={`Photo of ${title}`}
-                className="aspect-square w-44"
+                className="aspect-square w-44 md:w-80"
               />
             </Content>
           ))}
@@ -68,7 +68,7 @@ const Destination = () => {
               <Trigger
                 key={trigger}
                 value={trigger}
-                className="box-border border-b-[3px] border-b-transparent pb-2 font-barlow-condensed text-sm uppercase tracking-[2.36px] aria-selected:border-b-white"
+                className="box-border border-b-[3px] border-b-transparent pb-2 font-barlow-condensed text-sm uppercase tracking-[2.36px] aria-selected:border-b-white md:text-base"
               >
                 {trigger}
               </Trigger>
@@ -78,14 +78,14 @@ const Destination = () => {
           {contents.map(
             ({ title, description, distance, travelTime, ...rest }) => (
               <Content key={title} value={title} className="text-center">
-                <div className="border-b border-b-border pb-6">
-                  <h2 className="mb-1 font-bellefair text-5xl uppercase">
+                <div className="border-b border-b-border pb-6 md:pb-12">
+                  <h2 className="mb-1 font-bellefair text-5xl uppercase md:mb-6 md:text-7xl">
                     {title}
                   </h2>
                   <p>{description}</p>
                 </div>
 
-                <div className="grid gap-8 pt-6">
+                <div className="grid gap-8 pt-6 md:grid-cols-2 md:pt-7">
                   <div>
                     <p className="font-barlow-condensed text-sm tracking-[2.36px]">
                       AVG. DISTANCE

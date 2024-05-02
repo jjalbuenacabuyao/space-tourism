@@ -40,20 +40,36 @@ const Destination = () => {
   ];
 
   return (
-    <div className="bg-dest-mobile">
+    <div className="min-h-screen bg-dest-mobile bg-cover bg-no-repeat md:bg-dest-tablet lg:bg-dest-desktop">
       <Header />
-      <main className="min-h-screen">
+      <main className="mx-auto max-w-screen-xl">
         <NumberedHeading index={1} title="Pick your destination" />
-        <Root defaultValue="Moon" className="px-6 pb-14">
+        <Root
+          defaultValue="Moon"
+          className="flex grid-rows-[1fr_auto] flex-col items-center gap-8 px-6 pb-14 md:gap-14 md:px-24 md:pb-16 lg:grid lg:grid-cols-2"
+        >
           {contents.map(({ title, img, ...rest }) => (
-            <Content key={title} value={title}>
-              <img src={img} alt={`Photo of ${title}`} />
+            <Content
+              key={title}
+              value={title}
+              forceMount
+              className="hidden data-[state=active]:block lg:row-span-2"
+            >
+              <img
+                src={img}
+                alt={`Photo of ${title}`}
+                className="mx-auto aspect-square w-44 md:w-80 xl:w-[28rem]"
+              />
             </Content>
           ))}
 
-          <List aria-label="Pick your destination">
+          <List aria-label="Pick your destination" className="flex gap-6">
             {triggers.map((trigger) => (
-              <Trigger key={trigger} value={trigger}>
+              <Trigger
+                key={trigger}
+                value={trigger}
+                className="box-border border-b-[3px] border-b-transparent pb-2 font-barlow-condensed text-sm uppercase tracking-[2.36px] text-off-white aria-selected:border-b-white aria-selected:text-white md:text-base"
+              >
                 {trigger}
               </Trigger>
             ))}
@@ -61,20 +77,40 @@ const Destination = () => {
 
           {contents.map(
             ({ title, description, distance, travelTime, ...rest }) => (
-              <Content key={title} value={title}>
-                <div>
-                  <h2>{title}</h2>
-                  <p>{description}</p>
+              <Content
+                key={title}
+                value={title}
+                className="text-center lg:text-left"
+              >
+                <div className="border-b border-b-border pb-6 md:pb-12">
+                  <h2 className="mb-1 font-bellefair text-5xl uppercase md:mb-6 md:text-7xl xl:text-[6.5rem]">
+                    {title}
+                  </h2>
+                  <p className="xl:text-lg">{description}</p>
                 </div>
 
-                <div>
+                <div className="grid gap-8 pt-6 md:grid-cols-2 md:pt-7">
                   <div>
-                    <p>AVG. DISTANCE</p>
-                    <p>{distance}</p>
+                    <p className="font-barlow-condensed text-sm tracking-[2.36px]">
+                      AVG. DISTANCE
+                    </p>
+                    <p
+                      aria-label="Average distance"
+                      className="font-bellefair text-3xl uppercase"
+                    >
+                      {distance}
+                    </p>
                   </div>
                   <div>
-                    <p>Est. travel time</p>
-                    <p>{travelTime}</p>
+                    <p className="font-barlow-condensed text-sm tracking-[2.36px]">
+                      Est. travel time
+                    </p>
+                    <p
+                      aria-label="Estimated travel Time"
+                      className="font-bellefair text-3xl uppercase"
+                    >
+                      {travelTime}
+                    </p>
                   </div>
                 </div>
               </Content>

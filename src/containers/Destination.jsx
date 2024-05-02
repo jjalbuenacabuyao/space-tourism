@@ -42,7 +42,7 @@ const Destination = () => {
   return (
     <div className="min-h-screen bg-dest-mobile bg-cover bg-no-repeat md:bg-dest-tablet lg:bg-dest-desktop">
       <Header />
-      <main className="max-w-screen-xl mx-auto">
+      <main className="mx-auto max-w-screen-xl">
         <NumberedHeading index={1} title="Pick your destination" />
         <Root
           defaultValue="Moon"
@@ -58,7 +58,7 @@ const Destination = () => {
               <img
                 src={img}
                 alt={`Photo of ${title}`}
-                className="aspect-square w-44 md:w-80"
+                className="mx-auto aspect-square w-44 md:w-80 xl:w-[28rem]"
               />
             </Content>
           ))}
@@ -83,10 +83,10 @@ const Destination = () => {
                 className="text-center lg:text-left"
               >
                 <div className="border-b border-b-border pb-6 md:pb-12">
-                  <h2 className="mb-1 font-bellefair text-5xl uppercase md:mb-6 md:text-7xl">
+                  <h2 className="mb-1 font-bellefair text-5xl uppercase md:mb-6 md:text-7xl xl:text-[6.5rem]">
                     {title}
                   </h2>
-                  <p>{description}</p>
+                  <p className="xl:text-lg">{description}</p>
                 </div>
 
                 <div className="grid gap-8 pt-6 md:grid-cols-2 md:pt-7">

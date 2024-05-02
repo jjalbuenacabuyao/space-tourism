@@ -42,18 +42,18 @@ const Destination = () => {
   return (
     <div className="min-h-screen bg-dest-mobile bg-cover bg-no-repeat md:bg-dest-tablet">
       <Header />
-      <main>
+      <main className="max-w-screen-xl mx-auto">
         <NumberedHeading index={1} title="Pick your destination" />
         <Root
           defaultValue="Moon"
-          className="flex flex-col items-center gap-8 px-6 pb-14 md:gap-14 md:px-24 md:pb-16"
+          className="flex grid-rows-[1fr_auto] flex-col items-center gap-8 px-6 pb-14 md:gap-14 md:px-24 md:pb-16 lg:grid lg:grid-cols-2"
         >
           {contents.map(({ title, img, ...rest }) => (
             <Content
               key={title}
               value={title}
               forceMount
-              className="hidden data-[state=active]:block"
+              className="hidden data-[state=active]:block lg:row-span-2"
             >
               <img
                 src={img}
@@ -77,7 +77,11 @@ const Destination = () => {
 
           {contents.map(
             ({ title, description, distance, travelTime, ...rest }) => (
-              <Content key={title} value={title} className="text-center">
+              <Content
+                key={title}
+                value={title}
+                className="text-center lg:text-left"
+              >
                 <div className="border-b border-b-border pb-6 md:pb-12">
                   <h2 className="mb-1 font-bellefair text-5xl uppercase md:mb-6 md:text-7xl">
                     {title}

@@ -70,11 +70,11 @@ const Destination = () => {
                 <div>
                   <div>
                     <p>AVG. DISTANCE</p>
-                    <p>{distance}</p>
+                    <p aria-label="Average distance">{distance}</p>
                   </div>
                   <div>
                     <p>Est. travel time</p>
-                    <p>{travelTime}</p>
+                    <p aria-label="Estimated travel Time">{travelTime}</p>
                   </div>
                 </div>
               </Content>

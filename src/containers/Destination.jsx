@@ -40,20 +40,36 @@ const Destination = () => {
   ];
 
   return (
-    <div className="bg-dest-mobile">
+    <div className="min-h-screen bg-dest-mobile bg-cover bg-no-repeat">
       <Header />
-      <main className="min-h-screen">
+      <main>
         <NumberedHeading index={1} title="Pick your destination" />
-        <Root defaultValue="Moon" className="px-6 pb-14">
+        <Root
+          defaultValue="Moon"
+          className="flex flex-col items-center gap-8 px-6 pb-14"
+        >
           {contents.map(({ title, img, ...rest }) => (
-            <Content key={title} value={title}>
-              <img src={img} alt={`Photo of ${title}`} />
+            <Content
+              key={title}
+              value={title}
+              forceMount
+              className="hidden data-[state=active]:block"
+            >
+              <img
+                src={img}
+                alt={`Photo of ${title}`}
+                className="aspect-square w-44"
+              />
             </Content>
           ))}
 
-          <List aria-label="Pick your destination">
+          <List aria-label="Pick your destination" className="flex gap-6">
             {triggers.map((trigger) => (
-              <Trigger key={trigger} value={trigger}>
+              <Trigger
+                key={trigger}
+                value={trigger}
+                className="box-border border-b-[3px] border-b-transparent pb-2 font-barlow-condensed text-sm uppercase tracking-[2.36px] aria-selected:border-b-white"
+              >
                 {trigger}
               </Trigger>
             ))}
@@ -61,20 +77,36 @@ const Destination = () => {
 
           {contents.map(
             ({ title, description, distance, travelTime, ...rest }) => (
-              <Content key={title} value={title}>
-                <div>
-                  <h2>{title}</h2>
+              <Content key={title} value={title} className="text-center">
+                <div className="border-b border-b-border pb-6">
+                  <h2 className="mb-1 font-bellefair text-5xl uppercase">
+                    {title}
+                  </h2>
                   <p>{description}</p>
                 </div>
 
-                <div>
+                <div className="grid gap-8 pt-6">
                   <div>
-                    <p>AVG. DISTANCE</p>
-                    <p aria-label="Average distance">{distance}</p>
+                    <p className="font-barlow-condensed text-sm tracking-[2.36px]">
+                      AVG. DISTANCE
+                    </p>
+                    <p
+                      aria-label="Average distance"
+                      className="font-bellefair text-3xl uppercase"
+                    >
+                      {distance}
+                    </p>
                   </div>
                   <div>
-                    <p>Est. travel time</p>
-                    <p aria-label="Estimated travel Time">{travelTime}</p>
+                    <p className="font-barlow-condensed text-sm tracking-[2.36px]">
+                      Est. travel time
+                    </p>
+                    <p
+                      aria-label="Estimated travel Time"
+                      className="font-bellefair text-3xl uppercase"
+                    >
+                      {travelTime}
+                    </p>
                   </div>
                 </div>
               </Content>

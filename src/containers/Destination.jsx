@@ -40,7 +40,7 @@ const Destination = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-dest-mobile bg-cover bg-no-repeat md:bg-dest-tablet">
+    <div className="min-h-screen bg-dest-mobile bg-cover bg-no-repeat md:bg-dest-tablet lg:bg-dest-desktop">
       <Header />
       <main className="max-w-screen-xl mx-auto">
         <NumberedHeading index={1} title="Pick your destination" />

@@ -4,11 +4,13 @@ const TabRoot = ({ children, defaultValue, page }) => {
   return (
     <Root
       defaultValue={defaultValue}
-      className={`flex grid-rows-[1fr_auto] flex-col items-center ${
-        page === "technology" ? "px-0" : "px-6 md:px-24"
+      className={`flex flex-col items-center ${
+        page === "technology" ? "px-0" : "px-6 md:px-24 lg:px-16"
       } gap-8 ${
-        page === "crew" ? "pb-0" : "pb-14 md:pb-16"
-      } md:gap-14 lg:grid lg:grid-cols-2`}
+        page === "crew"
+          ? "pb-0 md:flex-col-reverse lg:grid lg:grid-cols-2 lg:grid-rows-[auto_auto] lg:gap-0"
+          : "grid-rows-[1fr_auto] pb-14 md:gap-14 md:pb-16 lg:grid lg:grid-cols-2"
+      }`}
     >
       {children}
     </Root>

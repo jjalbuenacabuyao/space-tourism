@@ -11,7 +11,7 @@ const TabTextContent = ({
   return (
     <Content key={title} value={title} className="text-center lg:text-left">
       <div className={` pb-6 md:pb-12 ${page !== "crew" ? "border-b border-b-border" : "pb-28"}`}>
-        {page === "crew" && <h2 className="font-bellefair uppercase">{role}</h2>}
+        {page === "crew" && <h2 className="font-bellefair uppercase md:text-2xl lg:text-3xl">{role}</h2>}
         <h2
           className={`mb-1 font-bellefair uppercase md:mb-6 md:text-7xl xl:text-[6.5rem] ${
             page === "crew" ? "text-2xl" : "text-5xl"

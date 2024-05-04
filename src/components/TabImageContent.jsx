@@ -12,8 +12,8 @@ const TabImageContent = ({ title, img, page }) => {
         src={img}
         alt={`Photo of ${title}`}
         className={`mx-auto ${
-          page === "destination" && "aspect-square w-44 md:w-80 xl:w-[28rem]"
-        } `}
+          page === "destination" ? "aspect-square w-44 md:w-80 xl:w-[28rem]" : ""
+        } ${page === "crew" ? "h-56" : ""}`}
       />
     </Content>
   );

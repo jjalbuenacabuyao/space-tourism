@@ -41,7 +41,7 @@ const Crew = () => {
       <Header />
       <main className="mx-auto max-w-screen-xl">
         <NumberedHeading index={2} title="Meet your crew" />
-        <TabRoot page="crew" defaultValue="Douglas Hurley">
+        <TabRoot page="crew" defaultValue="Douglas Hurley" className="md:flex-col-reverse">
           {crew.map(({ name, img, role, bio }) => (
             <TabImageContent img={img} page="crew" title={name} />
           ))}

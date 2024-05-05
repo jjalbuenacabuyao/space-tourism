@@ -1,11 +1,18 @@
 import React from "react";
-import { Header, NumberedHeading, TabImageContent, TabList, TabRoot, TabTextContent } from "../components";
+import {
+  Header,
+  NumberedHeading,
+  TabImageContent,
+  TabList,
+  TabRoot,
+  TabTextContent,
+} from "../components";
 
 const Crew = () => {
   const crew = [
     {
       name: "Douglas Hurley",
-      img : "/images/crew/image-douglas-hurley.png",
+      img: "/images/crew/image-douglas-hurley.png",
       role: "Commander",
       bio: "Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.",
     },
@@ -49,7 +56,12 @@ const Crew = () => {
           <TabList label="Crews" triggers={triggers} type="circles" />
 
           {crew.map(({ name, role, bio, ...rest }) => (
-            <TabTextContent page="crew" title={name} description={bio} role={role} />
+            <TabTextContent
+              page="crew"
+              title={name}
+              description={bio}
+              role={role}
+            />
           ))}
         </TabRoot>
       </main>

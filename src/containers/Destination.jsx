@@ -56,7 +56,11 @@ const Destination = () => {
             <TabImageContent title={title} img={img} page="destination" />
           ))}
 
-          <TabList triggers={triggers} label="Pick your destination" />
+          <TabList
+            triggers={triggers}
+            label="Pick your destination"
+            type="text"
+          />
 
           {contents.map(
             ({ title, description, distance, travelTime, ...rest }) => (

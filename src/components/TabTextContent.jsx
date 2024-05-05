@@ -9,13 +9,19 @@ const TabTextContent = ({
   role,
 }) => {
   return (
-    <Content key={title} value={title} className="text-center lg:text-left">
+    <Content
+      key={title}
+      value={title}
+      className={`text-center lg:text-left ${
+        page === "technology" ? "px-6 md:px-24 lg:px-0" : ""
+      }`}
+    >
       <div
         className={` pb-6 ${
-          page !== "crew"
+          page === "destination"
             ? "border-b border-b-border md:pb-12"
             : "pb-28 md:pb-6"
-        }`}
+        } ${page === "technology" ? "md:pb-28 lg:pb-0" : ""}`}
       >
         {page === "crew" && (
           <h2 className="font-bellefair uppercase md:mb-2 md:text-2xl lg:text-3xl">

@@ -11,7 +11,9 @@ const TabImageContent = ({ title, img, page }) => {
           ? "justify-self-end border-b border-b-off-white/25 md:border-none lg:col-start-2 lg:row-end-2"
           : ""
       } ${page === "destination" ? "lg:row-span-2" : ""} ${
-        page === "technology" ? "lg:col-span-2 lg:col-start-3 lg:row-start-1" : ""
+        page === "technology"
+          ? "lg:col-span-2 lg:col-start-3 lg:row-start-1"
+          : ""
       }`}
     >
       <picture>

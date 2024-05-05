@@ -6,7 +6,7 @@ const TabRoot = ({ children, defaultValue, page }) => {
       defaultValue={defaultValue}
       className={`flex flex-col items-center ${
         page === "technology"
-          ? "px-0 pb-0 lg:grid lg:grid-cols-[auto_auto_auto_auto] lg:pb-24 lg:gap-x-20 lg:gap-y-0 lg:items-center"
+          ? "px-0 pb-0 lg:grid lg:grid-cols-[auto_auto_auto_auto] lg:items-center lg:gap-x-20 lg:gap-y-0 lg:pb-24"
           : "px-6 md:px-24"
       } gap-8 ${
         page === "crew"

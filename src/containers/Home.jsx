@@ -22,7 +22,7 @@ const Home = () => {
           </p>
         </div>
 
-        <button className="lg:self-end lg:justify-self-end rounded-full bg-white py-16 px-[30px] font-bellefair text-xl uppercase leading-none tracking-[1.25px] text-clr-dark md:px-16 md:py-28 md:text-3xl md:tracking-[2px]">
+        <button className="rounded-full bg-white py-16 px-[30px] font-bellefair text-xl uppercase leading-none tracking-[1.25px] text-clr-dark md:px-16 md:py-28 md:text-3xl md:tracking-[2px] lg:self-end lg:justify-self-end">
           Explore
         </button>
       </main>

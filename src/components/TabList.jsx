@@ -7,7 +7,9 @@ const TabList = ({ triggers, type, label }) => {
       className={`flex ${
         type === "circles" ? "gap-4 pb-12 lg:row-start-1" : "gap-6"
       } ${
-        type === "numbered" ? "px-6 md:px-24 lg:flex-col lg:pr-0 lg:items-start lg:justify-between lg:col-start-1 lg:gap-8" : ""
+        type === "numbered"
+          ? "px-6 md:px-24 lg:col-start-1 lg:flex-col lg:items-start lg:justify-between lg:gap-8 lg:pr-0"
+          : ""
       }`}
     >
       {triggers.map((trigger, index) => (
@@ -16,7 +18,7 @@ const TabList = ({ triggers, type, label }) => {
           value={trigger}
           className={`${
             type === "numbered"
-              ? "rounded-full border border-white/25 w-10 aspect-square flex items-center justify-center md:w-16 lg:w-20 md:text-2xl lg:text-4xl font-bellefair leading-none text-white aria-selected:border-white aria-selected:bg-white aria-selected:text-clr-dark"
+              ? "flex aspect-square w-10 items-center justify-center rounded-full border border-white/25 font-bellefair leading-none text-white aria-selected:border-white aria-selected:bg-white aria-selected:text-clr-dark md:w-16 md:text-2xl lg:w-20 lg:text-4xl"
               : ""
           } ${
             type === "circles"
